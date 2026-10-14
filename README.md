@@ -103,7 +103,7 @@ The included 3D model and other assets may be subject to separate licensing term
 **Pratyush Ranjan**
 
 - GitHub: [@pratyush072006ranjan](https://github.com/pratyush072006ranjan)
-- LinkedIn: [Pratyush Ranjan](https://www.linkedin.com/pratyush-ranjan-20936a326/)
+- LinkedIn: [Pratyush Ranjan](https://www.linkedin.com/in/pratyush-ranjan-20936a326/)
 
 ---
 
