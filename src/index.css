@@ -1,0 +1,324 @@
+@import "tailwindcss";
+
+@theme {
+--color-blue: #2997FF;
+
+--color-gray: #86868b;
+--color-gray-100: #94928d;
+--color-gray-200: #afafaf;
+--color-gray-300: #42424570;
+
+--color-zinc: #101010;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+body {
+color: white;
+width: 100%;
+overflow-x: hidden;
+min-height: 100%;
+background: #000;
+border-color: #3b3b3b;
+user-select: none;
+}
+
+canvas {
+touch-action: none;
+}
+
+.screen-max-width {
+margin-inline: auto;
+position: relative;
+max-width: 1120px;
+}
+
+@utility flex-center {
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+@utility nav-height {
+height: calc(100vh - 60px);
+}
+@utility btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-block: 2rem;
+  padding: 0.4rem 1.25rem;
+
+  border: 1px solid transparent;
+  border-radius: 9999px;
+  min-width: 70px;
+  min-height:35px;
+  background-color: var(--color-blue);
+  color: white;
+
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.4;
+
+  cursor: pointer;
+  white-space: nowrap;
+
+  transition: background-color 0.3s ease,
+              color 0.3s ease,
+              border-color 0.3s ease;
+}
+
+@utility color-container {
+display: flex;
+align-items: center;
+justify-content: center;
+padding: 1rem;
+border-radius: 9999px;
+background-color: var(--color-gray-300);
+backdrop-filter: blur(8px);
+}
+
+@utility size-btn-container {
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 0.25rem;
+margin-left: 0.75rem;
+padding: 0.25rem;
+border-radius: 9999px;
+background-color: var(--color-gray-300);
+backdrop-filter: blur(8px);
+}
+
+@utility size-btn {
+display: flex;
+width: 2.5rem;
+height: 2.5rem;
+align-items: center;
+justify-content: center;
+border-radius: 9999px;
+background-color: white;
+color: black;
+font-size: 0.875rem;
+transition: all 0.2s;
+}
+
+@utility common-padding {
+padding: 5rem 1.25rem;
+}
+
+@utility section-heading {
+margin-bottom: 1.25rem;
+transform: translateY(5rem);
+font-size: 1.875rem;
+font-weight: 500;
+opacity: 0;
+color: var(--color-gray);
+}
+
+@utility feature-text {
+max-width: 28rem;
+transform: translateY(100px);
+font-size: 1.125rem;
+font-weight: 600;
+opacity: 0;
+color: var(--color-gray);
+}
+
+@utility feature-text-container {
+display: flex;
+width: 100%;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+gap: 1.25rem;
+margin-top: 2.5rem;
+}
+
+@utility feature-video {
+width: 100%;
+height: 100%;
+transform: scale(1.5);
+object-fit: cover;
+object-position: center;
+opacity: 0;
+}
+
+@utility feature-video-container {
+display: flex;
+width: 100%;
+flex-direction: column;
+align-items: center;
+gap: 1.25rem;
+}
+
+@utility link {
+display: flex;
+transform: translateY(5rem);
+cursor: pointer;
+align-items: center;
+font-size: 1.25rem;
+color: var(--color-blue);
+opacity: 0;
+}
+
+@utility control-btn {
+display: flex;
+align-items: center;
+justify-content: center;
+margin-left: 1rem;
+padding: 1rem;
+border-radius: 9999px;
+background-color: var(--color-gray-300);
+backdrop-filter: blur(8px);
+}
+
+@utility hero-title {
+text-align: center;
+font-size: 1.875rem;
+font-weight: 600;
+color: #f3f4f6;
+opacity: 0;
+}
+
+@utility hiw-title {
+text-align: center;
+font-size: 2.25rem;
+font-weight: 600;
+}
+
+@utility hiw-subtitle {
+padding-block: 2.5rem;
+text-align: center;
+font-size: 1.25rem;
+font-weight: 600;
+color: var(--color-gray);
+}
+
+@utility hiw-video {
+position: absolute;
+width: 95%;
+height: 90%;
+overflow: hidden;
+border-radius: 56px;
+}
+
+@utility hiw-text-container {
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+justify-content: space-between;
+gap: 6rem;
+}
+
+@utility hiw-text {
+font-size: 1.25rem;
+font-weight: 400;
+color: var(--color-gray);
+}
+
+@utility hiw-bigtext {
+margin-block: 0.5rem;
+font-size: 1.875rem;
+font-weight: 400;
+color: white;
+}
+
+.video-carousel_container {
+  position: relative;
+  width: 100%;
+  height: 70vh;          /* or 100vh / auto, see below */
+  margin-inline: auto;
+  overflow: hidden;
+  background: #000;
+  border-radius: 0;      /* 24px leaves rounded corners */
+}
+
+.video-carousel_container video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;     /* fills the width, crops top/bottom if needed */
+}
+
+@utility g_fadeIn {
+transform: translateY(100px);
+opacity: 0;
+}
+
+@media (min-width: 640px) {
+  .common-padding {
+    padding: 8rem 2.5rem;
+  }
+
+  .video-carousel_container {
+    
+    width: 100%;
+    height: 50vh;
+  }
+}
+@media (min-width: 768px) {
+.section-heading {
+font-size: 3rem;
+margin-bottom: 0;
+}
+
+.feature-text {
+font-size: 1.25rem;
+}
+
+.feature-text-container,
+.hiw-text-container {
+flex-direction: row;
+}
+
+.feature-text-container {
+margin-top: 4rem;
+}
+
+.hiw-title {
+font-size: 4.5rem;
+}
+
+.hiw-text {
+font-weight: 600;
+}
+
+.hiw-bigtext {
+font-size: 3rem;
+font-weight: 600;
+}
+
+.video-carousel_container {
+height: 70vh;
+}
+}
+
+@media (min-width: 1024px) {
+.section-heading {
+font-size: 3.75rem;
+}
+}
+
+@media (max-width: 767px) {
+.hero-title {
+margin-bottom: 2.5rem;
+}
+}
+
+@media (hover: hover) {
+.btn:hover {
+background-color: transparent;
+border-color: var(--color-blue);
+color: var(--color-blue);
+}
+
+.link:hover {
+text-decoration: underline;
+}
+}
